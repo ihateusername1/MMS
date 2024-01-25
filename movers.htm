@@ -103,7 +103,7 @@ function foc()
       {
          $( ".cross" ).hide();
          $( ".hamburger" ).show();
-	       $('#addmoverdialog').dialog('close');
+	       //$('#addmoverdialog').dialog('close');
       }
       );
    }
@@ -112,16 +112,16 @@ function foc()
 
 
 
-   $('#addmoverdialog').dialog(
-   {
-      autoOpen : false,
-      modal :  true,
-      width : '98%',
-      height : '850',
-      title : 'Add Mover to Job',
-      closeText: "show"
-   }
-   );
+  // $('#addmoverdialog').dialog(
+  // {
+   //   autoOpen : false,
+    //  modal :  true,
+    //  width : '98%',
+    //  height : '850',
+    //  title : 'Add Mover to Job',
+     // closeText: "show"
+  // }
+  // );
 
 
   // const iframe1 = document.createElement("iframe");
@@ -207,6 +207,7 @@ function MoverSelected()
 	 $('#imgholderdiv').hide();
    $('#calendarframe').remove();
    $('#clockinframe').remove();
+	 $('#addmoverframe').remove();
 	
 	const iframe3 = document.createElement("iframe");
    iframe3.id = 'addmoverframe';
@@ -232,6 +233,7 @@ function ClockIn()
    $('#imgholderdiv').hide();
    $('#calendarframe').remove();
 	 $('#addmoverframe').remove();
+	$('#clockinframe').remove();
   
    
       $.LoadingOverlay("show",
