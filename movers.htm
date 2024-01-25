@@ -124,14 +124,14 @@ function foc()
    );
 
 
-   const iframe1 = document.createElement("iframe");
-   iframe1.id = 'addmoverframe';
-   iframe1.width = '100%';
-   iframe1.height = '845px';
-   iframe1.style = 'border:none';
-   iframe1.src = "https://creatorapp.zohopublic.com/information152/household-goods-moving-services/form-embed/Add_Mover_To_Job/K94Pj9Q02ZQxseasgKf3RRvjqk8A5rC6CREEXtMW14vx3rhJx78x8JFxuke5XTgv1RDEjXm5Qv9AY9bD0rCC6wdAfvhnRTH4GVF4";
+  // const iframe1 = document.createElement("iframe");
+   //iframe1.id = 'addmoverframe';
+   //iframe1.width = '100%';
+   //iframe1.height = '845px';
+   //iframe1.style = 'border:none';
+   //iframe1.src = "https://creatorapp.zohopublic.com/information152/household-goods-moving-services/form-embed/Add_Mover_To_Job/K94Pj9Q02ZQxseasgKf3RRvjqk8A5rC6CREEXtMW14vx3rhJx78x8JFxuke5XTgv1RDEjXm5Qv9AY9bD0rCC6wdAfvhnRTH4GVF4";
 
-   $('#addmoverdialog').append(iframe1)
+   //$('#addmoverdialog').append(iframe1)
 
 }
 
@@ -149,15 +149,19 @@ function HomeSelected()
    $('#imgholderdiv').show();
    $('#calendarframe').remove();
    $('#clockinframe').remove();
-	 $('#addmoverdialog').dialog('close');
+	  $('#addmoverframe').remove();
+	
+	// $('#addmoverdialog').dialog('close');
 
 }
 
 
 function CalendarSelected()
 {
-   $('#clockinframe').remove();
- $('#addmoverdialog').dialog('close');
+	$('#calendarframe').remove();
+	//$('#addmoverdialog').dialog('close');
+	$('#clockinframe').remove();
+		$('#addmoverframe').remove();	
 	
 	
    $.LoadingOverlay("show",
@@ -178,7 +182,7 @@ function CalendarSelected()
       $( ".hamburger" ).show();
    }
    );
-   $('#calendarframe').remove()
+   
    const iframe0 = document.createElement("iframe");
    iframe0.style = 'border:none';
    iframe0.id = 'calendarframe';
@@ -200,7 +204,15 @@ function MoverSelected()
       $( ".hamburger" ).show();
    }
    );
-   $('#addmoverdialog').dialog('open');
+	const iframe3 = document.createElement("iframe");
+   iframe3.id = 'addmoverframe';
+   iframe3.width = '100%';
+   iframe3.height = '1200px';
+   iframe3.style = 'border:none';
+   iframe3.src = "https://creatorapp.zohopublic.com/information152/household-goods-moving-services/form-embed/Add_Mover_To_Job/K94Pj9Q02ZQxseasgKf3RRvjqk8A5rC6CREEXtMW14vx3rhJx78x8JFxuke5XTgv1RDEjXm5Qv9AY9bD0rCC6wdAfvhnRTH4GVF4";
+
+   document.body.appendChild(iframe3);
+  // $('#addmoverdialog').dialog('open');
 }
 
 function ClockIn()
@@ -212,9 +224,10 @@ function ClockIn()
    }
    );
 
-   $('#addmoverdialog').dialog('close');
+   //$('#addmoverdialog').dialog('close');
    $('#imgholderdiv').hide();
    $('#calendarframe').remove();
+	 $('#addmoverframe').remove();
   
    
       $.LoadingOverlay("show",
@@ -223,10 +236,7 @@ function ClockIn()
       imageAnimation : "8000ms pulse"
    }
    );
-  // howlong = Math.random() * 1000;
-   
-
-
+  
    const options =
    {
       enableHighAccuracy : true,
@@ -316,5 +326,5 @@ function error()
 	<img id="splash" src="https://images.squarespace-cdn.com/content/v1/5ae8afd73917ee3150d25ec8/a9dc2415-e7d7-4e32-b6dc-9f810d0edbb7/image-asset.jpeg?format=300w" width="300" >
 </img></div>
 
-<div id="addmoverdialog" style="display: flex;justify-content: center;padding-top:200px;"></div>
+<!--div id="addmoverdialog" style="display: flex;justify-content: center;padding-top:200px;"></div-->
 </body>
