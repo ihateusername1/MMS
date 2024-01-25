@@ -147,13 +147,17 @@ function HomeSelected()
    $('#imgholderdiv').show();
    $('#calendarframe').remove();
    $('#clockinframe').remove();
+	$('#addmoverframe').remove();
 
 }
 
 
 function CalendarSelected()
 {
-   $('#clockinframe').remove();
+   $('#clockinframe').remove();s
+	$('#addmoverframe').remove();
+	
+	
    $.LoadingOverlay("show",
    {
       imageColor : "#0C419a",
@@ -209,6 +213,7 @@ function ClockIn()
    $('#addmoverdialog').dialog('close');
    $('#imgholderdiv').hide();
    $('#calendarframe').remove();
+	$('#addmoverframe').remove();
    
       $.LoadingOverlay("show",
    {
