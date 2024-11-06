@@ -91,8 +91,7 @@ function foc()
       $( ".menu" ).slideToggle( "fast", function()
       {
          $( ".hamburger" ).hide();
-         $( ".cross" ).show();
-	       $('#addmoverdialog').dialog('close');
+         $( ".cross" ).show();	      
       }
       );
    }
@@ -119,22 +118,12 @@ function HomeSelected()
       $( ".hamburger" ).show();
    }
    )
-
-
-
- //  $('#imgholderdiv').show();
- //  $('#calendarframe').remove();
- //  $('#clockinframe').remove();
-	//  $('#addmoverframe').remove();
-  $('#createinvoiceframe').remove();
 }
 
 
 function CreateInvoiceSelected()
 {
-	$('#createinvoiceframe').remove();
-	//$('#addmoverdialog').dialog('close');
-
+	$('#createinvoiceframe').remove();	 
 	
 	
    $.LoadingOverlay("show",
